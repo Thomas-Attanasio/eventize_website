@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+
+{% block title %} Prodotto | Eventize {% endblock %}
+
+{% block extraCSS %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/prodotto.css') }}">
+{% endblock %}
+
+{% block pageContent %}
+    <div class="prodottoWrapper">
+        <!-- HERO -->
+        <section class="prodottoHero fadeIn">
+            <div class="heroText">
+                <span class="badge">La Soluzione</span>
+
+                <h2>Un ecosistema pensato per l'equilibrio.</h2>
+                <p>
+                    Abbiamo creato un ponte sicuro tra il sentire del team e le decisioni aziendali, senza mai compromettere l'identità del singolo.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- PRESENTAZIONE RAPIDA -->
+        <section class="productDna reveal">
+            <div class="dnaGrid">
+                <div class="dnaItem">
+                    <div class="dnaIcon"><i class="fas fa-shield-alt"></i></div>
+
+                    <h3>Sicuro</h3>
+                    <p>
+                        Crittografia end-to-end per ogni feedback inviato.
+                    </p>
+                </div>
+
+                <div class="dnaItem">
+                    <div class="dnaIcon"><i class="fas fa-bolt"></i></div>
+
+                    <h3>Immediato</h3>
+                    <p>
+                        Risposte in tempo reale per situazioni di stress acuto.
+                    </p>
+                </div>
+
+                <div class="dnaItem">
+                    <div class="dnaIcon"><i class="fas fa-mask"></i></div>
+
+                    <h3>Anonimo</h3>
+                    <p>
+                        L'identità del singolo scompare nel dato collettivo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- MOBILE APP -->
+        <section class="featureDetail reveal">
+            <div class="featureContent">
+                <div class="iconCircle"><i class="fas fa-mobile-alt"></i></div>
+
+                <h2>L'App per i Dipendenti</h2>
+                <p>
+                    Uno spazio personale e protetto, per monitorare il proprio stato di stress.
+                </p>
+
+                <ul class="benefitList">
+                    <li class="revealList">
+                        <strong>Report Giornalieri:</strong> Un click per comunicare il mood della giornata.
+                    </li>
+
+                    <li class="revealList">
+                        <strong>Accesso psicologico:</strong> Chat diretta con professionisti abilitati.
+                    </li>
+
+                    <li class="revealList">
+                        <strong>Numeri di Emergneza:</strong> Supporto rapido per situazioni di crisi.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="featureVisual">
+                <!-- MOCKUP MOBILE -->
+                <div class="phoneMockup">
+                    <div class="phoneScreen">
+                        <div class="appHeader">Ciao, come ti senti oggi?</div>
+
+                        <div class="appMoods">
+                            <div class="mood animMood">😊</div>
+                            <div class="mood animMood active">😐</div>
+                            <div class="mood animMood">😫</div>
+                        </div>
+
+                        <div class="appCardAnim">Supporto Attivo</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- WEB DASHBOARD -->
+        <section class="featureDetail reverse reveal">
+            <div class="featureVisual">
+                <!-- MOCKUP BROWSER -->
+                <div class="browserMockup">
+                    <div class="browserHeader">
+                        <div class="dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="browserScreen">
+                        <div class="chartPlaceholder">
+                            <div class="bar animBar" style="--h: 60%; transition-delay: 0.2s"></div>
+                            <div class="bar animBar" style="--h: 80%; transition-delay: 0.4s"></div>
+                            <div class="bar animBar" style="--h: 40%; transition-delay: 0.6s"></div>
+                        </div>
+
+                        <div class="browserTextLine">
+                            Sentiment: <span class="pulseText">Ottimale</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featureContent">
+                <div class="iconCircle"><i class="fas fa-chart-pie"></i></div>
+
+                <h2>La Dashboard Aziendale</h2>
+                <p>
+                    Dati aggregati per decisioni umane. Il ROI del benessere a portata di click.
+                </p>
+
+                <ul class="benefitList">
+                    <li class="revealList">
+                        <strong>Trend Analysis:</strong> Visualizza la salute del team di nel tempo.
+                    </li>
+
+                    <li  class="revealList">
+                        <strong>Segnalazioni Critiche:</strong> Alert per carichi di lavoro eccessivi.
+                    </li>
+
+                    <li class="revealList">
+                        <strong>Anonymus Inbox:</strong> Suggerimenti diretti dei dipendenti.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- FOCUS SULL'ANONIMATO -->
+        <section class="privacyFocus reveal">
+            <div class="privacyCard">
+                <i class="fas fa-user-secret"></i>
+
+                <h3>L'anonimato è il nostro core.</h3>
+                <p>
+                    Nessun dato viene mostrato indivicualmente. L'azienda vede solo trend e medie di gruppo per garantire la totale protezione dell'identità.
+                </p>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+
+
+<!-- CTA -->
+{% block ctaTitle %}
+    Vuoi vedere Eventize in azione?
+{% endblock %}
+
+{% block ctaParagraph %}
+    Ti mostreremo come l'app e la dashboard possono integrarsi nel tuo flusso di lavoro.
+{% endblock %}
+
+{% block nextSectionLink %}
+    <a href="/sicurezza" class="nextSectionBtn">Privacy e Sicurezza</a>
+{% endblock %}

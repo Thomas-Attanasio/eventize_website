@@ -1,0 +1,184 @@
+/* --- LAYOUT GENERALE --- */
+.scenarioWrapper {
+    color: #333;
+    padding: 60px 8%;
+}
+
+
+
+
+
+/* --- HERO --- */
+.scenarioHero {
+    margin-bottom: 60px;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.subTitle {
+    color: #7C5F8D;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.scenarioHero h1 {
+    margin: 20px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+}
+
+.scenarioHero p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+
+
+
+
+/* --- GRAFICI A BARRE --- */
+.dataSection {
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    margin-bottom: 80px;
+    padding: 50px;
+}
+
+.sectionIntro {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.chartsContainer {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.barContainer {
+    margin-bottom: 25px;
+}
+
+.barLabel {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.barFill {
+    width: 0;
+    height: 35px;
+    background-color: #EADDF0;
+    border-radius: 5px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: width 1.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.barFill.purple {
+    background-color: #7C5F8D;
+    color: #FFFFFF;
+}
+
+.barFill.gray {
+    background-color: #B4A4BD;
+    color: #FFFFFF;
+}
+
+.barFill span {
+    font-weight: bold;
+}
+
+
+
+
+
+/* --- FATTORI STRESS --- */
+.factorCard {
+    background-color: #FCFAFF;
+    border-left: 4px solid #7C5F8D;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 25px;
+}
+
+.factorCard i {
+    color: #7C5F8D;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/* --- CICLO DEL BURNOUT --- */
+.cycleGrid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.cycleStep {
+    background-color: #FFF;
+    border: 1px solid #EADDF0;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.cycleStep:hover {
+    border-color: #7C5F8D;
+    transform: translateY(-5px);
+}
+
+.stepNum {
+    color: #EADDF0;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+
+
+
+
+/* --- ANIMAZIONI --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .chartsContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .scenarioHero h1 {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+
+{% block title %} Sicurezza e Privacy | Eventize {% endblock %}
+
+{% block extraCSS %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/sicurezza.css') }}">
+{% endblock %}
+
+
+{% block pageContent %}
+    <div class="sicurezzaWrapper">
+        <!-- HERO -->
+        <section class="sicurezzaHero fadeIn">
+            <div class="heroText">
+                <span class="badge">Privacy First</span>
+
+                <h1>La tua fiducia è il nostro asset più prezioso.</h1>
+                <p>
+                    Proteggiamo i dati dei dipendenti e la reputazione delle aziende con i più alti standard di sicurezza informatica e protocolli etici.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ANONIMATO TECNICO -->
+        <section class="securityDetail reveal">
+            <div class="securityContent">
+                <h2 class="detailTitle">L'algoritmo del rispetto</h2>
+
+                <p class="detailIntro">
+                    Molti parlano di anonimato, noi lo abbiamo reso strutturale. Ecco come proteggiamo l'identità del singolo:
+                </p>
+
+                <div class="stepWrapper">
+                    <div class="securityStep">
+                        <div class="stepIcon"><i class="fas fa-random"></i></div>
+
+                        <div class="stepText">
+                            <h4>Disaccoppiamento dei dati</h4>
+                            <p>
+                                L'identità e le risposte viaggiano su binari separati. Anche in caso di accesso forzato, i dati non sono riconducibili ad una persona fisica.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="securityStep">
+                        <div class="stepIcon"><i class="fas fa-users-slash"></i></div>
+
+                        <div class="stepText">
+                            <h4>Regola del 5</h4>
+                            <p>
+                                Nessun dato viene mostrato se il campione è inferiore a 5. Proteggiamo il dipendente anche all'interno di piccoli team.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="securityVisual">
+                <div class="shieldContainer">
+                    <div class="pulseRing"></div>
+
+                    <div class="pulseRing delay1"></div>
+
+                    <i class="fas fa-shield-alt mainShieldIcon"></i>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CONFRONTO -->
+        <section class="transparencySection reveal">
+            <h2 class="sectionTitle">Trasparenza Totale</h2>
+            <p class="subtitleText">
+                Garantiamo una distinzione netta tra dati sensibili e dati analitici.
+            </p>
+
+            <div class="comparisonContainer">
+                <div class="dataCard cardNo">
+                    <div class="cardHeader">
+                        <div class="headerIcon">
+                            <i class="fas fa-eye-slash"></i>
+                        </div>
+
+                        <h3>Cosa <span class="highlightNo">NON</span> vede l'azienda</h3>
+                    </div>
+
+                    <ul class="dataList">
+                        <li>
+                            <i class="fas fa-times-circle"></i>
+                            <span>Nome e cognome del singolo dipendente</span>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-times-circle"></i>
+                            <span>Singole risposte ai mood-tracker giornalieri</span>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-times-circle"></i>
+                            <span>Orari esatti di invio dei feedback</span>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-times-circle"></i>
+                            <span>Contenuto privato delle chat di supporto</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dataCard cardYes">
+                    <div class="cardHeader">
+                        <div class="headerIcon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+
+                        <h3>Cosa vede l'azienda</h3>
+                    </div>
+
+                    <ul class="dataList">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Media aggregata del sentiment del team</span>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Trend di stress settimanali e mensili</span>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Suggerimenti anonimi per il miglioramento</span>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Indici di benessere e ROI della salute mentale</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+
+
+<!-- CTA -->
+{% block ctaTitle %}
+    Hai domande tecniche sulla sicurezza?
+{% endblock %}
+
+{% block ctaParagraph %}
+    Il nostro team è a disposizione per approfondire i protocolli di protezione dati con il tuo repato IT.
+{% endblock %}
+
+{% block nextSectionLink %}
+    <a href="/benefici" class="nextSectionBtn">Vantaggi e ROI</a>
+{% endblock %}

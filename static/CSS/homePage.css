@@ -1,0 +1,209 @@
+/* --- LAYOUT GENERALE --- */
+.heroWrapper {
+    color: #4A4A4A;
+    padding: 40px 5%;
+}
+
+.sectionTitle {
+    color: 7C5F8D;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+
+
+
+/* --- SEZIONE HERO --- */
+.heroSection {
+    min-height: 60vh;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heroContent {
+    max-width: 600px;
+    padding: 20px;
+    flex: 1;
+}
+
+.heroContent h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.heroContent p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.heroBtns {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+
+
+/* --- BOTTONI --- */
+.btnPrimary,
+.btnSecondary {
+    font-family: inherit;
+    border: none;
+    border-radius: 50px;
+    margin-top: 20px;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnPrimary {
+    background-color: #7C5F8D;
+    color: #FFFFFF;
+}
+
+.btnPrimary:hover {
+    background-color: #A392AD;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(124, 95, 141, 0.3);
+}
+
+.btnSecondary {
+    background-color: transparent;
+    color: #7C5F8D;
+    border: 2px solid #7C5F8D;
+}
+
+.btnSecondary:hover {
+    background-color: #EADDF0;
+}
+
+
+
+
+
+/* --- STATISTICHE (URGENZA) --- */
+.urgencySection {
+    background-color: #FCFAFF;
+    border-radius: 30px;
+    margin-bottom: 80px;
+    padding: 60px 20px;
+}
+
+.statsGrid {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.statCard {
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.statNumber {
+    color: #7C5F8D;
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    display: inline-block;
+}
+
+.statSuffix {
+    color: #7C5F8D;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+
+
+
+/* --- COSA FACCIAMO --- */
+.dualCards {
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.featureCard {
+    background-color: #FFFFFF;
+    border: 1px solid #EADDF0;
+    border-radius: 20px;
+    padding: 10px;
+    transition: all 0.4s ease;
+}
+
+.featureCard:hover {
+    border-color: #7C5F8D;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 05);
+}
+
+.iconBox {
+    color: #B4A4BD;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.featureList {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.featureList li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.featureList i {
+    color: #7C5F8D;
+    margin-right: 10px;
+}
+
+
+
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .btnPrimary,
+    .btnSecondary {
+        width: 100%;
+        padding: 12px 24px;
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    .heroBtns {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .heroContent h1 {
+        margin-bottom: 15px;
+        font-size: 2.2rem;
+    }
+
+    .heroContent p {
+        margin-bottom: 25px;
+        font-size: 1.1rem;
+    }
+
+    .featureCard {
+        padding: 25px 20px;
+    }
+}

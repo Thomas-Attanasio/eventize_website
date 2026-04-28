@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% block title %} Home | Eventize {% endblock %}
+
+{% block extraCSS %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/homePage.css') }}">
+{% endblock %}
+
+{% block pageContent %}
+    <div class="homeWrapper">
+
+        <!-- SEZIONE HERO -->
+        <section class="heroSection">
+            <div class="heroContent">
+                <h1 class="fadeIn">
+                    Il benessere mentale <br>
+                    <span class="accentText">nell'industria degli eventi.</span>
+                </h1>
+
+                <p class="fadeInDelayed">
+                    Supportiamo i team delle PMI con soluzioni anonime, professionali e basate sui dati. Perché un evento di successo parte da un team sereno.
+                </p>
+
+                <div class="heroBtns fadeInDelayed">
+                    <a href="#urgency" class="btnSecondary">Scopri di più</a>
+                    <a href="#demo" class="btnPrimary">Richiedi Demo</a>
+                </div>
+            </div>
+
+            <div class="heroVisual">
+                <div class="floatingShape"></div>
+            </div>
+        </section>
+
+
+        <!-- SEZIONE URGENZA (STATISTICHE) -->
+        <section id="urgency" class="urgencySection">
+            <h2 class="sectionTitle">Perché ora?</h2>
+
+            <div class="statsGrid">
+                <div class="statCard reveal">
+                    <span class="statNumber" data-target="87">0</span>
+                    <span class="statSuffix">%</span>
+
+                    <p>dei professionisti degli eventi soffre di stress elevato.</p>
+                </div>
+
+                <div class="statCard reveal">
+                    <span class="statNumber" data-target="1">0</span>
+                    <span class="statSuffix"> su 3</span>
+
+                    <p>rischia il burnout entro i primi 2 anni di attività.</p>
+                </div>
+
+                <div class="statCard reveal">
+                    <span class="statNumber" data-target="42">0</span>
+                    <span class="statSuffix">%</span>
+
+                    <p>di aumento della produttività con un supporto psicologico adeguato.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SEZIONE COSA FACCIAMO -->
+        <section class="whatWeDo">
+            <h2 class="sectionTitle">Una soluzione doppia</h2>
+
+            <div class="dualCards">
+                <div class="featureCard">
+                    <div class="iconBox"><i class="fas fa-mobile-alt"></i></div>
+
+                    <h3>Per i Dipendenti</h3>
+                    <p>
+                        Un'area sicura per report giornalieri, feedback anonimi e accesso diretto a supporto psicologico professionale.
+                    </p>
+
+                    <ul class="featureList">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Anonimato garantito
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Risorse di self-help
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="featureCard">
+                    <div class="iconBox"><i class="fas fa-chart-line"></i></div>
+
+                    <h3>Per le Aziende</h3>
+                    <p>
+                        Una dashboard intuitiva per monitorare il "clima" del team senza mai violare la privacy del singolo.
+                    </p>
+
+                    <ul class="featureList">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Sentiment Analysis
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Report mensili sul benessere
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+
+
+<!-- CTA FINALE -->
+{% block ctaTitle %}
+    Pronti a trasformare la vostra cultura aziendale?
+{% endblock %}
+
+{% block ctaParagraph %}
+    Prenota una demo gratuita e scopri come Eventize può aiutare la tua PMI.
+{% endblock %}
+
+{% block nextSectionLink %}
+    <a href="/scenario" class="nextSectionBtn">Scopri lo scenario</a>
+{% endblock %}
+
+
+{% block extraJS %}
+    <script type="module" src="{{ url_for('static', filename='JS/homePage.js') }}"></script>
+{% endblock %}

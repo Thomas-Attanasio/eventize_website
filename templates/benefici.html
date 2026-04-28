@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+{% block title %} Benefici | Eventize {% endblock %}
+
+{% block extraCSS %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/benefici.css') }}">
+{% endblock %}
+
+
+{% block pageContent %}
+    <div class="beneficiWrapper">
+        <!-- HERO -->
+        <section class="beneficiHero fadeIn">
+            <div class="heroText">
+                <span class="badge">Valore Aziendale</span>
+
+                <h1>Il benessere non è un costo, <br>è un investimento.</h1>
+
+                <p>
+                    Ridurre lo stress del team significa proteggere il motore della tua azienda. Scopri come Eventize trasforma la cultura aziendale in un vantaggio competitivo.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- PILASTRI DEL ROI -->
+        <section class="roiGrid reveal">
+            <div class="roiCard">
+                <div class="roiIcon"><i class="fas fa-user-plus"></i></div>
+
+                <h3>Talent Retention</h3>
+
+                <p>
+                    Il settore eventi ha un turnover altissimo. Eventize ti aiuta a mantenere i talenti migliori, risparmiando migliaia di euro in nuove assunzioni e formazione.
+                </p>
+
+                <div class="roiStat">
+                    -25% <span>Turnover stimato</span>
+                </div>
+            </div>
+
+            <div class="roiCard highlight">
+                <div class="roiIcon"><i class="fas fa-chart-line"></i></div>
+
+                <h3>Produttività</h3>
+
+                <p>
+                    Un dipendente sereno è più creativo e commette meno errori operativi. Monitorare il sentiment permette di prevenire i cali di performance dovuti al burnout.
+                </p>
+
+                <div class="roiStat">
+                    +40% <span>Efficienza del team</span>
+                </div>
+            </div>
+
+            <div class="roiCard">
+                <div class="roiIcon"><i class="fas fa-star"></i></div>
+
+                <h3>Employer Branding</h3>
+
+                <p>
+                    Posiziona la tua PMI come un luogo di lavoro etico e moderno. Attrarre nuovi talenti diventa naturale quando l'azienda mette le persone al centro.
+                </p>
+
+                <div class="roiStat">
+                    TOP <span>Brand Reputation</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- COSTO DEL SILENZIO VS VALORE DELL'ASCOLTO -->
+        <section class="comparisonSection reveal">
+            <h2 class="sectionTitle">Il valore dell'ascolto</h2>
+
+            <div class="comparisonTable">
+                <div class="compBox shadowSide">
+                    <h4>Senza Eventize</h4>
+
+                    <ul>
+                        <li>
+                            <i class="fas fa-time"></i>
+                            Stress accumulato ed invisibile
+                        </li>
+
+                        <li>
+                            <i class="fas fa-time"></i>
+                            Dimissioni improvvise
+                        </li>
+
+                        <li>
+                            <i class="fas fa-time"></i>
+                            Clima aziendale teso
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="compBox mainSide">
+                    <h4>Con Eventize</h4>
+
+                    <ul>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Intervento preventivo immediato
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Dialogo anonimo e costante
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Team coeso e motivato
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+
+
+<!-- CTA -->
+{% block ctaTitle %}
+    Inizia a investire nel tuo team
+{% endblock %}
+
+{% block ctaParagraph %}
+    Poche settimane di utilizzo di Eventize possono cambiare drasticamente il clima della tua azienda. Parliamo di numeri e risultati.
+{% endblock %}
+
+{% block nextSectionLink %}
+    <a href="/" class="nextSectionBtn">Torna alla Home</a>
+{% endblock %}

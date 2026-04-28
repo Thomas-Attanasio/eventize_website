@@ -1,0 +1,294 @@
+.sicurezzaWrapper {
+    padding: 60px 5%;
+}
+
+
+
+
+
+/* --- HERO --- */
+.sicurezzaHero {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.badge {
+    color: #7C5F8D;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.sicurezzaHero h1 {
+    margin: 20px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+}
+
+
+
+
+
+/* --- SECURITY DETAILS --- */
+.securityDetail {
+    margin-bottom: 120px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.securityContent {
+    flex: 1.2;
+}
+
+.securityVisual {
+    display: flex;
+    flex: 0.8;
+    justify-content: center;
+}
+
+.detailTitle {
+    color: #7C5F8D;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+}
+
+.detailIntro {
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.securityStep {
+    background-color: #FFFFFF;
+    border-left: 5px solid #7C5F8D;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(124, 95, 141, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.securityStep:hover {
+    transform: translateX(10px);
+}
+
+.stepIcon {
+    width: 50px;
+    height: 50px;
+    background-color: #EADDF0;
+    color: #7C5F8D;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.stepText h4 {
+    color: #333;
+    margin-bottom: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+}
+
+.stepText p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.shieldContainer {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.mainShieldIcon {
+    color: #7C5F8D;
+    font-size: 8rem;
+    z-index: 5;
+    filter: drop-shadow(0 10px 15px rgba(124, 95, 141, 0.2));
+}
+
+.pulseRing {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #B4A4BD;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+}
+
+.reveal.active .pulseRing {
+    animation: ringPulse 2.5s infinite ease-out;
+}
+
+.reveal.active .delay1 {
+    animation-delay: 1.25s;
+}
+
+@keyframes ringPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+/* --- CONFRONTO --- */
+.comparisonContainer {
+    max-width: 1100px;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.dataCard {
+    background-color: #FFFFFF;
+    border: 1px solid #EADDF0;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(124, 95, 141, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.dataCard:hover {
+    transform: translateY(-5px);
+}
+
+.cardHeader {
+    border-bottom: 2px solid #FCFAFF;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.headerIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardNo .headerIcon {
+    background-color: #FEE2E2;
+    color: #EF4444;
+}
+
+.cardYes .headerIcon {
+    background-color: #DCFCE7;
+    color: #22C55E;
+}
+
+.cardHeader h3 {
+    color: #333;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+}
+
+.highlightNo {
+    color: #EF4444;
+}
+
+.dataList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dataList li {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.dataList li i {
+    margin-top: 3px;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.cardNo .dataList li i {
+    color: #EF4444;
+}
+
+.cardYes .dataList li i {
+    color: #22C55E;
+}
+
+
+
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .securityDetail {
+        text-align: center;
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .detailTitle {
+        font-size: 2.2rem;
+    }
+
+    .securityStep {
+        border-top: 5px solid #7C5F8D;
+        border-left: none;
+        padding: 25px;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .securityStep:hover {
+        transform: translateY(-5px);
+    }
+
+    .shieldContainer {
+        margin-bottom: 20px;
+        transform: scale(0.8);
+    }
+
+    .comparisonContainer {
+        padding: 0 10px;
+        grid-template-columns: 1fr;
+    }
+
+    .dataCard {
+        padding: 30px 20px;
+    }
+
+    .sicurezzaHero h1 {
+        font-size: 2.5rem;
+    }
+}

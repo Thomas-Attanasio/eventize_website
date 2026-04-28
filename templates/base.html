@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Eventize {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/base.css') }}">
+    {% block extraCSS %}{% endblock %}
+    <link rel="icon" href="{{ url_for('static', filename='assets/eventizeLogo.png') }}">
+
+
+    <!-- LINK GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+
+    <script src="https://kit.fontawesome.com/683de985a5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="mainContainer">
+        <div class="backgroundContainer">
+
+
+            <!-- HEADER -->
+            <div class="headerBackground">
+                <div class="headerTitle">
+                    <a href="/">
+                        <img src="/static/assets/eventizeLogo.png" alt="Eventize Logo">
+                        <h1>Eventize</h1>
+                    </a>
+                </div>
+            </div>
+            
+
+            <!-- CONTENUTO PAGINA -->
+            <div class="pageContainer">
+                <!-- MESSAGGIO FLASH -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alertMessage {{ category }}">
+                                <i class="fas fa-info-circle"></i> {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+
+                {% block pageContent %}{% endblock %}
+
+                
+                <!-- CTA -->
+                <section class="ctaFinal reveal">
+                    <div class="ctaCard">
+                        <h2>{% block ctaTitle %}{% endblock %}</h2>
+
+                        <p>{% block ctaParagraph %}{% endblock %}</p>
+
+                        <div class="ctaBtns" id="demo">
+                            {% block nextSectionLink %}{% endblock %}
+                            <button id="openFormBtn" class="openFormBtn">Richiedi Demo</button>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- FOOTER -->
+                <footer class="siteFooter">
+                    <div class="footerContent">
+                        <div class="footerCol">
+                            <div class="footerLogo">
+                                <img src="/static/assets/eventizeLogo.png" alt="Eventize Logo">
+                                <span>Eventize</span>
+                            </div>
+
+                            <p class="footerDesc">
+                                Proteggiamo il cuore dell'industria degli eventi: le persone. Supporto al benessere mentale per team creativi e dinamici.
+                            </p>
+                        </div>
+
+                        <div class="footerCol">
+                            <h4>Navigazione</h4>
+
+                            <ul class="footerLinks">
+                                <li>
+                                    <a href="/">Home</a>
+                                </li>
+
+                                <li>
+                                    <a href="/scenario">Scenario</a>
+                                </li>
+
+                                <li>
+                                    <a href="/prodotto">Prodotto</a>
+                                </li>
+
+                                <li>
+                                    <a href="/sicurezza">Sicurezza</a>
+                                </li>
+
+                                <li>
+                                    <a href="/benefici">Benefici</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footerCol">
+                            <h4>Contatti</h4>
+
+                            <ul class="footerContact">
+                                <li>
+                                    <i class="fas fa-envelope"></i>
+                                    info@eventize.it
+                                </li>
+
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Via degli Eventi 42, Milano (MI)
+                                </li>
+
+                                <li>
+                                    <i class="fab fa-linkedin"></i>
+                                    <a href="#">LinkedIn</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="legalBar">
+                        <div class="legalContent">
+                            <p>&copy; 2026 Eventize. Tutti i diritti riservati.</p>
+
+                            <div class="legalLinks">
+                                <a href="#">Privacy Policy</a>
+
+                                <span>|</span>
+
+                                <a href="#">Coockie Policy</a>
+
+                                <span>|</span>
+
+                                <p>P.IVA 01234567890</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+
+                <!-- FORM DI CONTATTO -->
+                <div id="formContainer" class="formContainer">
+                    <div class="formContent">
+                        <button id="closeFormBtn" class="closeForm">&times;</button>
+
+                        <div class="formHeader">
+                            <h3>Inizia il cambiamento</h3>
+                            <p>Lasciaci i tuoi contatti per una consulenza gratuita personalizzata.</p>
+                        </div>
+
+                        <form action="{{ url_for('invia_richiesta') }}" method="POST" class="contactForm">
+                            <div class="formGroup">
+                                <label>Nome e Cognome</label>
+                                <input type="text" name="nome" placeholder="Mario Rossi" required>
+                            </div>
+
+                            <div class="formGroup">
+                                <label>Email Aziendale</label>
+                                <input type="email" name="email" placeholder="mario.rossi@azienda.it" required>
+                            </div>
+
+                            <div class="formGroup">
+                                <label>Nome Azienda</label>
+                                <input type="text" name="azienda" placeholder="Event Planning Srl" required>
+                            </div>
+
+                            <button type="submit" class="submitBtn">Invia Richiesta</button>
+                        </form>
+                    </div>
+                </div>
+
+
+                <!-- BARRA DI NAVIGAZIONE -->
+                <nav class="dockContainer">
+                    <div class="dock">
+                        <a href="/" class="folderWrapper {% if request.path == '/' %}activePage{% endif %}">
+                            <div class="folder">
+                                <div class="folderBack"></div>
+
+                                <div class="folderPaper">
+                                    <i class="fa-solid fa-house"></i>
+                                </div>
+
+                                <div class="folderFront"></div>
+                            </div>
+
+                            <span class="folderLabel">Home</span>
+                        </a>
+
+                        <a href="/scenario" class="folderWrapper {% if request.path == '/scenario' %}activePage{% endif %}">
+                            <div class="folder">
+                                <div class="folderBack"></div>
+
+                                <div class="folderPaper">
+                                    <i class="fa fa-exclamation-circle"></i>
+                                </div>
+
+                                <div class="folderFront"></div>
+                            </div>
+
+                            <span class="folderLabel">Scenario</span>
+                        </a>
+
+                        <a href="/prodotto" class="folderWrapper {% if request.path == '/prodotto' %}activePage{% endif %}">
+                            <div class="folder">
+                                <div class="folderBack"></div>
+
+                                <div class="folderPaper">
+                                    <i class="fa fa-lightbulb-o"></i>
+                                </div>
+
+                                <div class="folderFront"></div>
+                            </div>
+
+                            <span class="folderLabel">Prodotto</span>
+                        </a>
+
+                        <a href="/sicurezza" class="folderWrapper {% if request.path == '/sicurezza' %}activePage{% endif %}">
+                            <div class="folder">
+                                <div class="folderBack"></div>
+
+                                <div class="folderPaper">
+                                    <i class="fa fa-user-secret"></i>
+                                </div>
+
+                                <div class="folderFront"></div>
+                            </div>
+
+                            <span class="folderLabel">Sicurezza</span>
+                        </a>
+
+                        <a href="/benefici" class="folderWrapper {% if request.path == '/benefici' %}activePage{% endif %}">
+                            <div class="folder">
+                                <div class="folderBack"></div>
+
+                                <div class="folderPaper">
+                                    <i class="fa fa-line-chart"></i>
+                                </div>
+
+                                <div class="folderFront"></div>
+                            </div>
+
+                            <span class="folderLabel">Benefici</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="{{ url_for('static', filename='JS/base.js') }}"></script>
+    {% block extraJS %}{% endblock %}
+    
+</body>
+</html>

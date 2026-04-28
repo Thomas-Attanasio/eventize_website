@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+{% block title %} Scenario | Eventize {% endblock %}
+
+{% block extraCSS %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/scenario.css') }}">
+{% endblock %}
+
+{% block pageContent %}
+    <div class="scenarioWrapper">
+        <!-- HERO -->
+        <section class="scenarioHero">
+            <div class="heroTextBox fadeIn">
+                <span class="subTitle">L'analisi</span>
+
+                <h1>Oltre le quinte: <br> il costo invisibile degli eventi</h1>
+
+                <p>
+                    Lavorare negli eventi non è solo creatività e successo. È un settore caratterizzato da scadenze impossibili, ritmi frenetici ed un carico mentale costante.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- I NUMERI DEL SETTORE -->
+        <section class="dataSection reveal">
+            <h2 class="sectionTitle">La realtà dei fatti</h2>
+            <p class="sectionIntro">
+                Secondo studi recenti, l'Event Planner è classificato come uno dei <strong>5 lavori più stressanti al mondo</strong>
+            </p>
+
+            <div class="chartsContainer">
+                <!-- GRAFICO A BARRE -->
+                <div class="chartItem">
+                    <p>Percentuale di burnout riportata</p>
+
+                    <div class="barContainer">
+                        <div class="barLabel">Settore Eventi</div>
+
+                        <div class="barFill purple" style="--target-width: 72%">
+                            <span>72%</span>
+                        </div>
+                    </div>
+
+                    <div class="barContainer">
+                        <div class="barLabel">Media Altri Settori</div>
+
+                        <div class="barFill gray" style="--target-width: 45%">
+                            <span>45%</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- FATTORE STRESS -->
+                <div class="stressFactor">
+                    <div class="factorCard">
+                        <i class="fas fa-clock"></i>
+                        <h4>Orari estremi</h4>
+
+                        <p>Turni oltre le 12 ore durante la fase di esecuzione.</p>
+                    </div>
+
+                    <div class="factorCard">
+                        <i class="fas fa-exlamation-triangle"></i>
+                        <h4>Pressione Immediata</h4>
+
+                        <p>Ogni imprevisto ha un impatto diretto e pubblico.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CICLO DELLO STRESS -->
+        <section class="burnoutCycle reveal">
+            <h2 class="sectionTitle">Il Ciclo del Burnout</h2>
+
+            <div class="cycleGrid">
+                <div class="cycleStep">
+                    <div class="stepNum">01</div>
+                    <h3>Entusiasmo</h3>
+
+                    <p>Alta energia, ma inizio del debito di sonno.</p>
+                </div>
+
+                <div class="cycleStep">
+                    <div class="stepNum">02</div>
+                    <h3>Stagnazione</h3>
+
+                    <p>Le richieste superano le risorse mentali disponibili.</p>
+                </div>
+
+                <div class="cycleStep">
+                    <div class="stepNum">03</div>
+                    <h3>Frustrazione</h3>
+
+                    <p>Calo della creatività e aumento degli errori operativi.</p>
+                </div>
+
+                <div class="cycleStep">
+                    <div class="stepNum">04</div>
+                    <h3>Crisi</h3>
+
+                    <p>Dimissioni o assenze prolungate per motivi di salute.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+
+
+<!-- CTA FINALE -->
+{% block ctaTitle %}
+    Non aspettare che il tuo team arrivi al limite.
+{% endblock %}
+
+{% block ctaParagraph %}
+    Intervieni prima che lo stress diventi un costo per l'azienda.
+{% endblock %}
+
+{% block nextSectionLink %}
+    <a href="/prodotto" class="nextSectionBtn">Scopri la soluzione</a>
+{% endblock %}
+
+
+{% block extraJS %}
+    <script type="module" src="{{ url_for('static', filename='JS/scenario.js') }}"></script>
+{% endblock %}

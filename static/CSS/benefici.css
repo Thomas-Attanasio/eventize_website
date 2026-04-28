@@ -1,0 +1,178 @@
+.beneficiWrapper {
+    padding: 60px 5%;
+}
+
+
+
+
+
+/* --- HERO --- */
+.beneficiHero {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.beneficiHero h1 {
+    margin: 20px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+}
+
+.badge {
+    color: #7C5F8D;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+/* --- ROI --- */
+.roiGrid {
+    margin-bottom: 120px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.roiCard {
+    background-color: #FFFFFF;
+    border: 1px solid #EADDF0;
+    border-radius: 30px;
+    padding: 45px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.4s ease;
+}
+
+.roiCard.highlight {
+    border: 2px solid #7C5F8D;
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(124, 95, 141, 0.1);
+}
+
+.roiIcon {
+    color: #7C5F8D;
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+}
+
+.roiCard h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+}
+
+.roiCard p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.roiStat {
+    color: #7C5F8D;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.roiStat span {
+    font-family: inherit;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    opacity: 0.7;
+}
+
+
+
+
+
+/* --- TABELLA DI COMPARAZIONE --- */
+.comparisonSection {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.comparisonTable {
+    max-width: 900px;
+    border-radius: 30px;
+    margin: 50px auto 0;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.compBox {
+    padding: 50px;
+    text-align: left;
+    flex: 1;
+}
+
+.shadowSide {
+    background-color: #F8F9FA;
+    color: #888;
+}
+
+.mainSide {
+    background-color: #7C5F8D;
+    color: #FFFFFF;
+}
+
+.compBox h4 {
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+}
+
+.compBox ul {
+    padding: 0;
+    list-style: none;
+}
+
+.compBox ul li {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.shadowSide i {
+    color: #ccc;
+}
+
+.mainSide i {
+    color: #EADDF0;
+}
+
+
+
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1000px) {
+    .roiGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .roiCard.highlight {
+        transform: scale(1);
+    }
+
+    .comparisonTable {
+        flex-direction: column;
+    }
+
+    .beneficiHero h1 {
+        font-size: 2.5rem;
+    }
+}
