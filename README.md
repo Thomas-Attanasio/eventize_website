@@ -57,7 +57,7 @@ You can view the project here:
 
 
 ## Local Setup & Installation
-1- Clone the repositories: `git clone https://github.com/Thomas-Attanasio/eventize.git`
+1- Clone the repositories: `git clone https://github.com/Thomas-Attanasio/eventize_website.git`
 
 2- Create a virtual enviroment: `python -m venv venv`
 
