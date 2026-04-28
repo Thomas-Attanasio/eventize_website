@@ -43,7 +43,7 @@ The events industry thrives on creativity and precision, but often at the cost o
 
 ## Live demo
 You can view the project here:
-- [Click here to view the Live Demo]()
+- [Click here to view the Live Demo](https://eventize-website.onrender.com/)
 
 
 # Screenshots
